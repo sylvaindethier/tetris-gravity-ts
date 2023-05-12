@@ -1,0 +1,31 @@
+{
+  "name": "tetris-ts",
+  "description": "Tetris written in TypeScript",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylvaindethier/tetris-ts.git"
+  },
+  "keywords": [
+    "Tetris",
+    "Game",
+    "TypeScript"
+  ],
+  "author": "Sylvain Dethier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sylvaindethier/tetris-ts/issues"
+  },
+  "homepage": "https://sylvaindethier.github.io/tetris-ts",
+  "devDependencies": {
+    "glob": "^10.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  }
+}
