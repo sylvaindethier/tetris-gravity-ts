@@ -6,8 +6,10 @@
 	],
 	"settings": {
 		"cSpell.words": [
+			"codepaths",
 			"Dethier",
-			"tetris"
+			"tetris",
+			"tsbuildinfo"
 		]
 	}
 }

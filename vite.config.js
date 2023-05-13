@@ -15,6 +15,13 @@ const inputEntries = htmlFiles.map((file) => [
 ]);
 
 export default defineConfig({
+  // resolve alias
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
+  },
+  // needed for GitHub Pages
   base: "/tetris-ts/",
   build: {
     rollupOptions: {
