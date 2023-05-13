@@ -1,0 +1,105 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap"); */
+
+/*
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.__font-title {
+  font-family: "Shrikhand", cursive;
+}
+*/
+
+:root {
+  --color-black: #101010;
+  --color-black-light: #353535;
+
+  --color-grey: #7e7e7e;
+
+  --color-white: #fafafa;
+  --color-white-darker: #eaeaea;
+
+  --color-primary: #9356dc;
+  --color-primary-light: #ff79da;
+  --color-primary-lighter: #f5edff;
+
+  --color-valid: #99e2d0;
+  --color-valid-dark: #008766;
+
+  --transition-duration: 0.25s;
+}
+
+/******************************/
+/********** MODIFIER **********/
+/******************************/
+.__background-gradient,
+.__button {
+  /* default color */
+  color: white;
+  /* gradient primary-light to primary */
+  background-color: var(--color-primary-light);
+  background-image: linear-gradient(
+    to right bottom,
+    transparent,
+    var(--color-primary)
+  );
+}
+
+.__box-shadow,
+.__box-shadow_hover,
+.__button {
+  --offset-x: 0em;
+  --offset-y: 0.25em;
+  --blur-radius: 0.5em;
+  --spread-radius: 0em;
+  --color: rgba(0, 0, 0, 0.25);
+  /* offset-x: 0 | offset-y: 4px | blur-radius: 8px | spread-radius: 0 | color: black w/ 0.25 opacity */
+  /* box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25); */
+  box-shadow: var(--offset-x) var(--offset-y) var(--blur-radius)
+    var(--spread-radius) var(--color);
+  /* put it on top so it can be visible */
+  position: relative;
+  z-index: 1;
+  /* space after block to see the shadow = max value */
+  /* margin-block-end: 0.5em; */
+  margin-block-end: max(
+    var(--offset-x, 0em),
+    var(--offset-y, 0.25em),
+    var(--blur-radius, 0.5em),
+    var(--spread-radius, 0em)
+  );
+}
+
+.__box-shadow_hover,
+.__button {
+  transition-duration: var(--transition-duration);
+}
+
+.__box-shadow_hover:hover,
+.__button:hover {
+  --offset-x: 0.25em;
+  --color: rgba(0, 0, 0, 0.5);
+  /* offset-x: 4px | offset-y: 4px | blur-radius: 8px | spread-radius: 0 | color: black w/ 0.5 opacity */
+  /* changing variable value do the stuff */
+  /* box-shadow: 0.25em 0.25em 0.5em 0 rgba(0, 0, 0, 0.5); */
+}
+
+.__button {
+  /* --height: 3.25em; */
+  --padding-block: 1em;
+  --line-height: 1.25em;
+  --height: calc(var(--line-height) + (2 * var(--padding-block)));
+  --height-half: calc(var(--height) / 2);
+  /* inline but block to set `height` & `line-height` */
+  display: inline-block;
+  padding-block: var(--padding-block);
+  line-height: var(--line-height);
+  height: var(--height);
+  /* make border round perfect */
+  border: 0 solid;
+  border-radius: var(--height-half) / 50%;
+}
+
+.__button:hover {
+  transform: scale(1.1);
+}
