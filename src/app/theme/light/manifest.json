@@ -1,0 +1,6 @@
+{
+  "value": "light",
+  "text": "Light",
+  "colorScheme": "light",
+  "cssFiles": ["light.css"]
+}
