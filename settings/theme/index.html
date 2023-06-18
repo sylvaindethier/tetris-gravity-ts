@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris TS > Settings > Theme</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="/tetris.svg" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h1>Tetris TS > <span data-intl="settings">Settings</span> > <span data-intl="theme">Theme</span></h1>
+
+  <header>
+    <!-- Theme setting -->
+    <form id="setting-theme">
+      <label for="setting.theme">
+        <h3 data-intl="theme">Theme</h3>
+      </label>
+      <select name="setting.theme" id="setting.theme"></select>
+    </form>
+  </header>
+
+  <main>
+    <section>
+      <div class="surface-samples">
+        <div class="surface1 rad-shadow">1</div>
+        <div class="surface2 rad-shadow">2</div>
+        <div class="surface3 rad-shadow">3</div>
+        <div class="surface4 rad-shadow">4</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="text-samples">
+        <h1 class="text1">
+          <span class="swatch brand rad-shadow"></span>
+          Brand
+        </h1>
+        <h1 class="text1">
+          <span class="swatch text1 rad-shadow"></span>
+          Text Color 1
+        </h1>
+        <h1 class="text2">
+          <span class="swatch text2 rad-shadow"></span>
+          Text Color 2
+        </h1>
+        <br>
+        <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.</p>
+        <p class="text2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./index.ts"></script>
+</body>
+
+</html>

@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tetris TS > Settings</title>
+  <!-- SEO -->
+  <title>Tetris TS > Settings > Language</title>
   <!-- favicon -->
   <link rel="icon" type="image/svg+xml" href="/tetris.svg" />
   <!-- CSS -->
@@ -14,11 +15,18 @@
 </head>
 
 <body>
-  <h1>Tetris TS > <span data-intl="settings">Settings</span></h1>
-  <ul>
-    <li><a href="./lang/" data-intl="language">Language</a></li>
-    <li><a href="./theme/" data-intl="theme">Theme</a></li>
-  </ul>
+  <h1>Tetris TS > <span data-intl="settings">Settings</span> > <span data-intl="language">Language</span></h1>
+
+  <header>
+    <!-- Lang setting -->
+    <form id="setting-lang">
+      <label for="setting.lang">
+        <h3 data-intl="language">Language</h3>
+      </label>
+      <select name="setting.lang" id="setting.lang"></select>
+    </form>
+  </header>
+
   <script type="module" src="./index.ts"></script>
 </body>
 

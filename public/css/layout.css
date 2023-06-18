@@ -1,0 +1,201 @@
+/***************************/
+/********** RESET **********/
+/***************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* reset default browser margin, padding, & list on <nav><ul> */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  line-height: 1.5;
+}
+
+/********** fullscreen body **********/
+body {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+
+body, #app {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+#app {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/******************************/
+/********** MODIFIER **********/
+/******************************/
+.__display_flex.__justify-content_center,
+.__flex-justify-center,
+.__flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.__display_flex.__align_center,
+.__flex-align-center,
+.__flex-center {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.__text-align_center,
+.__text-center {
+  text-align: center;
+}
+
+/* contain text overflow w/ ellipsis & make sure container has overflow hidden */
+.__overflow_hidden,
+.__text-overflow-has {
+  overflow: hidden;
+}
+
+.__overflow_hidden.__white-space_nowrap.__text-overflow_ellipsis,
+.__text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.__width_100p {
+  width: 100%;
+}
+
+.__lh_0 {
+  line-height: 0;
+}
+
+.__margin-block_0,
+.__title-block,
+.__title {
+  margin-block: 0;
+}
+
+.__margin-block-end_1em,
+.__title-block,
+.__title {
+  margin-block-end: 1em;
+}
+
+.__font-size_1rem,
+.__font-normal {
+  font-size: 1rem;
+}
+
+.__font-size_1-5rem,
+.__title {
+  font-size: 1.5rem;
+}
+
+.__font-weight_normal,
+.__font-normal {
+  font-weight: normal;
+}
+
+.__font-weight_lighter,
+.__font-lighter {
+  font-weight: lighter;
+  font-weight: 100;
+}
+
+.__link {
+  text-decoration: none;
+  color: unset;
+}
+
+.__button {
+  /* padding: 1em 2em; */
+  padding-block: 1em;
+  padding-inline: 2em;
+}
+
+.__list {
+  margin-block: 0;
+
+  /* let some space for the counter in ::marker */
+  /* padding-left: 1em; */
+  padding-inline-start: 1em;
+
+  /* flex item in column */
+  display: flex;
+  flex-direction: column;
+
+  /* reset list-style to disable ::marker */
+  list-style: none;
+  /* and reset left padding */
+  /* padding-left: 0; */
+  padding-inline-start: 0;
+}
+
+/********** .container **********/
+.container {
+  /* horizontal center */
+  /* margin: 0 auto; */
+  margin-block: 0;
+  margin-inline: auto;
+
+  /* --container_min-width: 320px; */
+  /* --container_max-width: 1600px; */
+  --container_min-width: 20rem;
+  --container_max-width: 100rem;
+  min-width: var(--container_min-width);
+  max-width: var(--container_max-width);
+  /* width to 100% or max-width */
+  width: 100%;
+  width: min(100%, var(--container_max-width, 100rem));
+  /* calculate width w/ minimum, preferred, or max */
+  width: clamp(
+    var(--container_min-width, 20rem),
+    100%,
+    var(--container_max-width, 100rem)
+  );
+
+  --container_padding-inline: 1.25rem;
+  /* inner horizontal space around */
+  /* padding: 0 var(--container_padding-inline); */
+  padding-block: 0;
+  padding-inline: var(--container_padding-inline);
+}
+
+/****************************/
+/********** MOBILE **********/
+/****************************/
+@media (max-width: 768px) or (max-width: 48rem) {
+}
+
+/****************************/
+/********** TABLET **********/
+/****************************/
+@media (width > 768px) or (width > 48rem) {
+}
+
+/*****************************/
+/********** DESKTOP **********/
+/*****************************/
+@media (width > 1024px) or (width > 64rem) {
+}

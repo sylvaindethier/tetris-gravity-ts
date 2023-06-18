@@ -1,0 +1,6 @@
+{
+  "value": "prefers",
+  "text": "Prefer OS",
+  "colorScheme": "prefers",
+  "cssFiles": ["prefers.css"]
+}

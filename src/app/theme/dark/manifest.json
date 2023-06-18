@@ -1,0 +1,6 @@
+{
+  "value": "dark",
+  "text": "Dark",
+  "colorScheme": "dark",
+  "cssFiles": ["dark.css"]
+}

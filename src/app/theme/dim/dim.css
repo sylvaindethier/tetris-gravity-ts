@@ -1,0 +1,18 @@
+/* @see https://codepen.io/argyleink/pen/vYxrrpd */
+[color-scheme="dim"] {
+  color-scheme: dark;
+
+  --brand-saturation-dim: calc(var(--brand-saturation) / 1.25);
+  --brand-lightness-dim: calc(var(--brand-lightness) / 1.25);
+  --brand: hsl(
+    var(--brand-hue) var(--brand-saturation-dim) var(--brand-lightness-dim)
+  );
+  --text1: hsl(var(--brand-hue) 15% 75%);
+  --text2: hsl(var(--brand-hue) 10% 61%);
+  --surface1: hsl(var(--brand-hue) 10% 20%);
+  --surface2: hsl(var(--brand-hue) 10% 25%);
+  --surface3: hsl(var(--brand-hue) 5% 30%);
+  --surface4: hsl(var(--brand-hue) 5% 35%);
+  --surface-shadow: var(--brand-hue) 30% 13%;
+  --shadow-strength: 0.2;
+}
