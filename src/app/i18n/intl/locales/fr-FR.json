@@ -1,0 +1,11 @@
+{
+  "settings": "Paramètres",
+  "language": "Langue",
+  "theme": "Thème",
+  "score": "",
+  "price": {
+    "currency": "EUR"
+  },
+  "today": "Aujourd'hui, on est le {now, date, ::yyyyMMdd}",
+  "play": "Jouer"
+}
