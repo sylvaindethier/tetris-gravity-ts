@@ -19,11 +19,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
+      // "@src": resolve(__dirname, "src"),
+      // "@app": resolve(__dirname, "app"),
     },
   },
   // needed for GitHub Pages
   base: "/tetris-ts/",
   build: {
+    target: "esnext",
     rollupOptions: {
       input: Object.fromEntries(inputEntries),
     },

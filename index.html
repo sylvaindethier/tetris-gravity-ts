@@ -3,27 +3,36 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/tetris.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tetris TS</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="/tetris.svg" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" class="container">
     <img src="/tetris.svg" class="logo" alt="Tetris TS logo" />
     <h1>Tetris TS</h1>
 
-    <div class="card">
-      <a href="./settings/">Settings</a>
+    <div>
+      <div data-intl="score">2000000</div>
+      <div data-intl="price">21</div>
+      <div data-intl="today">Today is ...</div>
     </div>
 
     <div class="card">
-      <button disabled id="start" type="button">Start</button>
+      <a href="./settings/" data-intl="settings">Settings</a>
+    </div>
+
+    <div class="card">
+      <button id="play" type="button" data-intl="play">Play</button>
     </div>
   </div>
-
-
-  <script type="module" src="./index/index.ts"></script>
+  <script type="module" src="./index.ts"></script>
 </body>
 
 </html>

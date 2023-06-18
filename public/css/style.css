@@ -1,5 +1,4 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap"); */
-
 /*
 * {
   font-family: "Roboto", sans-serif;
@@ -10,23 +9,35 @@
 }
 */
 
+/********** brand **********/
 :root {
-  --color-black: #101010;
-  --color-black-light: #353535;
+  --brand-hue: 200;
+  --brand-saturation: 100%;
+  --brand-lightness: 50%;
+}
 
-  --color-grey: #7e7e7e;
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
 
-  --color-white: #fafafa;
-  --color-white-darker: #eaeaea;
+:root, *, body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
 
-  --color-primary: #9356dc;
-  --color-primary-light: #ff79da;
-  --color-primary-lighter: #f5edff;
+/* @see https://codepen.io/argyleink/pen/vYxrrpd */
+html {
+  /* background-color: hsl(200, 25%, 90%); */
+  background-color: var(--surface1);
+  /* color: hsl(200, 100%, 10%); */
+  color: var(--text1);
+}
 
-  --color-valid: #99e2d0;
-  --color-valid-dark: #008766;
-
-  --transition-duration: 0.25s;
+a {
+  font-weight: 500;
 }
 
 /******************************/
@@ -34,6 +45,9 @@
 /******************************/
 .__background-gradient,
 .__button {
+  --color-primary: #9356dc;
+  --color-primary-light: #ff79da;
+
   /* default color */
   color: white;
   /* gradient primary-light to primary */
@@ -72,7 +86,9 @@
 
 .__box-shadow_hover,
 .__button {
-  transition-duration: var(--transition-duration);
+  transition: box-shadow;
+  transition-duration: 250ms;
+  will-change: box-shadow;
 }
 
 .__box-shadow_hover:hover,
@@ -98,6 +114,7 @@
   /* make border round perfect */
   border: 0 solid;
   border-radius: var(--height-half) / 50%;
+  will-change: transform;
 }
 
 .__button:hover {
