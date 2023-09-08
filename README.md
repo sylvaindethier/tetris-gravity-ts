@@ -21,6 +21,6 @@ Any push to the `main` branch will build and deploy to GitHub Pages
 - [ ] Desktop & Mobile / touch devices
 - [ ] Works offline (PWA)
 - [ ] Fully configurable game
-- [ ] I18N Provide translations:
+- [ ] I18N Provide translations (maybe consider using Fluent.js):
   - [x] English (default)
   - [ ] French
